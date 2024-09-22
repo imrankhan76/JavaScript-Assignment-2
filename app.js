@@ -236,27 +236,7 @@ else{
 alert("Syntax Error")
             }
 
-            var num1 = Number(prompt("Enter First number"));
-var num2 = Number(prompt("Enter Second number"));
-var operation = prompt("Which operation you are performing ( + , - , * , /, % ) ");
-
-if (operation == "+") {
-    alert("Addition of " + num1 + " + " + num2 + " is " + (num1 + num2));
-} else if (operation == "-") {
-    alert("Subtraction of " + num1 + " - " + num2 + " is " + (num1 - num2));
-} else if (operation == "*") {
-    alert("Multiplication of " + num1 + " * " + num2 + " is " + (num1 * num2));
-} else if (operation == "/") {
-    if (num2 != 0) {
-        alert("Division of " + num1 + " / " + num2 + " is " + (num1 / num2));
-    } else {
-        alert("Division by zero is not allowed.");
-    }
-} else if (operation == "%") {
-    alert("Modulus of " + num1 + " % " + num2 + " is " + (num1 % num2));
-} else {
-    alert("Syntax Error");
-}
+           
 
 // ----------------------------------------------------------------------------------
 
@@ -281,20 +261,35 @@ document.write("The value of --a is: "+value+"<br>");
 document.write("Now the value of --a is: "+value+"<br><br>");
 
 document.write("The value of a-- is: "+value--+"<br>");
-document.write("Now the value of a-- is: "+value+"<br>");
+document.write("Now the value of a-- is: "+value+"<br><hr>");
 
 
 //  --------------------------------------Q#2------------------------------------------
 
-var a = 2, b = 1;
-var result = --a - --b + ++b + b--;
-//  first pre decrement --a, now the value of a =1
-// and than pre decrement --b, now the value of b =0
-// after pre increment of ++b the value of b=1
-// again decrement of b but this time it is post decrement so before caalling b its value is b=1 and after call its value will be b=0
+var a = 2
+var b  = 1
 
-document.write("a="+a+"<br>b="+b+"<br>")
-document.write("Result: "+result+"<br>")
+var result  =  --a;
+document.write(`The value of --a is ${result} <br /> <br />`)
+
+a = 2
+b  = 1
+result = --a - --b;
+
+document.write(`The value of --a - --b is ${result} <br /> <br />`)
+
+a = 2
+b  = 1
+result = --a - --b + ++b;
+document.write(`The value of --a - --b + ++b is ${result} <br /> <br />`)
+
+a = 2
+b  = 1
+result = --a - --b + ++b + b--;
+
+document.write(`The value of --a - --b + ++b + b-- is ${result} <br /> <br />`)
+
+        alert(result)
 
 
 //  --------------------------------------Q#3------------------------------------------
